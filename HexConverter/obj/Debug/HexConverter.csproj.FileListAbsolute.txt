@@ -1,0 +1,10 @@
+D:\VS\repos\HexConverter\bin\Debug\HexConverter.exe.config
+D:\VS\repos\HexConverter\bin\Debug\HexConverter.exe
+D:\VS\repos\HexConverter\bin\Debug\HexConverter.pdb
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.csprojAssemblyReference.cache
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.Form1.resources
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.Properties.Resources.resources
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.csproj.GenerateResource.cache
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.csproj.CoreCompileInputs.cache
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.exe
+D:\VS\repos\HexConverter\obj\Debug\HexConverter.pdb
