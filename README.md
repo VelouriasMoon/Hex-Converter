@@ -3,6 +3,11 @@ Simple base convert base on 010 Editor's base converter
 
 Supports inputs for Decimal, Hex BE, Octal, and Binary. Output for Floats
 
+v0.3
+- Added Hex Calculator
+- Added Icon
+- Fixed exception handling 
+
 v0.2
 - Added Float input
 - Added Little Endian export
@@ -10,4 +15,4 @@ v0.2
 To Do:
 - Add Little Endian Input.
 
-![Hex Converter](Images/HexConverter.png)
+![Hex Converter](Images/HexConverter1.png)

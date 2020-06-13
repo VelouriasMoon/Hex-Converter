@@ -8,3 +8,13 @@ D:\VS\repos\HexConverter\obj\Debug\HexConverter.csproj.GenerateResource.cache
 D:\VS\repos\HexConverter\obj\Debug\HexConverter.csproj.CoreCompileInputs.cache
 D:\VS\repos\HexConverter\obj\Debug\HexConverter.exe
 D:\VS\repos\HexConverter\obj\Debug\HexConverter.pdb
+D:\GitHub\Hex-Converter\HexConverter\bin\Debug\HexConverter.exe.config
+D:\GitHub\Hex-Converter\HexConverter\bin\Debug\HexConverter.exe
+D:\GitHub\Hex-Converter\HexConverter\bin\Debug\HexConverter.pdb
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.csprojAssemblyReference.cache
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.Form1.resources
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.Properties.Resources.resources
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.csproj.GenerateResource.cache
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.csproj.CoreCompileInputs.cache
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.exe
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.pdb

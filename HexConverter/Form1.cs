@@ -37,11 +37,19 @@ namespace HexConverter
                 int Text2Length = textBox2.Text.Length;
                 if (Text1Length > 0)
                 {
-                    Int64 number = Convert.ToInt64(textBox1.Text, 10);
+                    long number;
+                    try
+                    {
+                        number = Convert.ToInt64(textBox1.Text, 10);
+                    }
+                    catch (FormatException)
+                    {
+                        return;
+                    }
                     string Bin = Convert.ToString(number, 2);
                     string Oct = Convert.ToString(number, 8);
                     string Hex = Convert.ToString(number, 16);
-                    Int64 num = Convert.ToInt64(Hex, 16);
+                    long num = Convert.ToInt64(Hex, 16);
                     byte[] Lbytes = BitConverter.GetBytes(num);
                     string LEHex = "";
                     foreach (byte b in Lbytes)
@@ -88,13 +96,21 @@ namespace HexConverter
                 if (Text2Length > 0)
                 {
                     string inbytes = textBox2.Text;
-                    Int64 number = Int64.Parse(inbytes, NumberStyles.AllowHexSpecifier);
+                    long number;
+                    try
+                    {
+                        number = Int64.Parse(inbytes, NumberStyles.AllowHexSpecifier);
+                    }
+                    catch (FormatException)
+                    {
+                        return;
+                    }
                     number = Convert.ToInt64(number);
                     string Hex = Convert.ToString(number, 16);
                     string dec = Convert.ToString(number, 10);
                     string oct = Convert.ToString(number, 8);
                     string bin = Convert.ToString(number, 2);
-                    Int64 num = Convert.ToInt64(Hex, 16);
+                    long num = Convert.ToInt64(Hex, 16);
                     byte[] Lbytes = BitConverter.GetBytes(num);
                     string LEHex = "";
                     foreach (byte b in Lbytes)
@@ -141,11 +157,19 @@ namespace HexConverter
                 int Text2Length = textBox2.Text.Length;
                 if (Text3Length > 0)
                 {
-                    Int64 number = Convert.ToInt64(textBox3.Text, 8);
+                    long number;
+                    try
+                    {
+                        number = Convert.ToInt64(textBox3.Text, 8);
+                    }
+                    catch (FormatException)
+                    {
+                        return;
+                    }
                     string Bin = Convert.ToString(number, 2);
                     string dec = Convert.ToString(number, 10);
                     string Hex = Convert.ToString(number, 16);
-                    Int64 num = Convert.ToInt64(Hex, 16);
+                    long num = Convert.ToInt64(Hex, 16);
                     byte[] Lbytes = BitConverter.GetBytes(num);
                     string LEHex = "";
                     foreach (byte b in Lbytes)
@@ -192,11 +216,19 @@ namespace HexConverter
                 int Text2Length = textBox2.Text.Length;
                 if (Text4Length > 0)
                 {
-                    Int64 number = Convert.ToInt64(textBox4.Text, 2);
+                    long number;
+                    try
+                    {
+                        number = Convert.ToInt64(textBox4.Text, 2);
+                    }
+                    catch (FormatException)
+                    {
+                        return;
+                    }
                     string dec = Convert.ToString(number, 10);
                     string Oct = Convert.ToString(number, 8);
                     string Hex = Convert.ToString(number, 16);
-                    Int64 num = Convert.ToInt64(Hex, 16);
+                    long num = Convert.ToInt64(Hex, 16);
                     byte[] Lbytes = BitConverter.GetBytes(num);
                     string LEHex = "";
                     foreach (byte b in Lbytes)
@@ -242,7 +274,15 @@ namespace HexConverter
                 int Text5Length = textBox5.Text.Length;
                 if (Text5Length > 0)
                 {
-                    float f = float.Parse(textBox5.Text);
+                    float f;
+                    try
+                    {
+                        f = float.Parse(textBox5.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        return;
+                    }
                     byte[] bytes = BitConverter.GetBytes(f);
                     Int32 number = BitConverter.ToInt32(bytes, 0);
                     string dec = Convert.ToString(number, 10);
@@ -274,6 +314,50 @@ namespace HexConverter
                 Textbox2Clear = true;
                 Textbox3Clear = true;
                 Textbox4Clear = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox9.Clear();
+            string bytes1 = textBox7.Text;
+            string bytes2 = textBox8.Text;
+            long num1;
+            long num2;
+            long num3;
+            string Hex;
+            try
+            {
+                num1 = Int64.Parse(bytes1, NumberStyles.AllowHexSpecifier);
+                num2 = Int64.Parse(bytes2, NumberStyles.AllowHexSpecifier);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
+            if (comboBox1.Text == "+")
+            {
+                num3 = (num1 + num2);
+                Hex = Convert.ToString(num3, 16);
+                textBox9.Text = Hex.ToUpper();
+            }
+            if (comboBox1.Text == "-")
+            {
+                num3 = (num1 - num2);
+                Hex = Convert.ToString(num3, 16);
+                textBox9.Text = Hex.ToUpper();
+            }
+            if (comboBox1.Text == "/")
+            {
+                num3 = (num1 / num2);
+                Hex = Convert.ToString(num3, 16);
+                textBox9.Text = Hex.ToUpper();
+            }
+            if (comboBox1.Text == "x")
+            {
+                num3 = (num1 * num2);
+                Hex = Convert.ToString(num3, 16);
+                textBox9.Text = Hex.ToUpper();
             }
         }
     }
