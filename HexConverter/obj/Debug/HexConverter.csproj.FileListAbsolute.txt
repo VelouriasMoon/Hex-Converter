@@ -18,3 +18,4 @@ D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.csproj.GenerateResou
 D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.csproj.CoreCompileInputs.cache
 D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.exe
 D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.pdb
+D:\GitHub\Hex-Converter\HexConverter\obj\Debug\HexConverter.Form2.resources

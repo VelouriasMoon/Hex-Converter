@@ -320,45 +320,118 @@ namespace HexConverter
         private void button1_Click(object sender, EventArgs e)
         {
             textBox9.Clear();
-            string bytes1 = textBox7.Text;
-            string bytes2 = textBox8.Text;
-            long num1;
-            long num2;
-            long num3;
-            string Hex;
-            try
+            string Input1 = textBox7.Text;
+            string Input2 = textBox8.Text;;
+            string Out;
+            if (checkBox2.Checked == true)
             {
-                num1 = Int64.Parse(bytes1, NumberStyles.AllowHexSpecifier);
-                num2 = Int64.Parse(bytes2, NumberStyles.AllowHexSpecifier);
+                long num1;
+                long num2;
+                long num3;
+                try
+                {
+                    num1 = Int64.Parse(Input1, NumberStyles.AllowHexSpecifier);
+                    num2 = Int64.Parse(Input2, NumberStyles.AllowHexSpecifier);
+                }
+                catch (FormatException)
+                {
+                    return;
+                }
+                if (comboBox1.Text == "+")
+                {
+                    num3 = num1 + num2;
+                    Out = Convert.ToString(num3, 16);
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "-")
+                {
+                    num3 = num1 - num2;
+                    Out = Convert.ToString(num3, 16);
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "/")
+                {
+                    num3 = num1 / num2;
+                    Out = Convert.ToString(num3, 16);
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "x")
+                {
+                    num3 = num1 * num2;
+                    Out = Convert.ToString(num3, 16);
+                    textBox9.Text = Out.ToUpper();
+                }
             }
-            catch (FormatException)
+            else if (checkBox1.Checked == true)
+            {
+                float num1;
+                float num2;
+                float num3;
+                try
+                {
+                    num1 = float.Parse(Input1);
+                    num2 = float.Parse(Input2);
+                }
+                catch (FormatException)
+                {
+                    return;
+                }
+                if (comboBox1.Text == "+")
+                {
+                    num3 = num1 + num2;
+                    Out = num3.ToString();
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "-")
+                {
+                    num3 = num1 - num2;
+                    Out = num3.ToString();
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "/")
+                {
+                    num3 = num1 / num2;
+                    Out = num3.ToString();
+                    textBox9.Text = Out.ToUpper();
+                }
+                if (comboBox1.Text == "x")
+                {
+                    num3 = num1 * num2;
+                    Out = num3.ToString();
+                    textBox9.Text = Out.ToUpper();
+                }
+            }
+            else
             {
                 return;
             }
-            if (comboBox1.Text == "+")
-            {
-                num3 = (num1 + num2);
-                Hex = Convert.ToString(num3, 16);
-                textBox9.Text = Hex.ToUpper();
-            }
-            if (comboBox1.Text == "-")
-            {
-                num3 = (num1 - num2);
-                Hex = Convert.ToString(num3, 16);
-                textBox9.Text = Hex.ToUpper();
-            }
-            if (comboBox1.Text == "/")
-            {
-                num3 = (num1 / num2);
-                Hex = Convert.ToString(num3, 16);
-                textBox9.Text = Hex.ToUpper();
-            }
-            if (comboBox1.Text == "x")
-            {
-                num3 = (num1 * num2);
-                Hex = Convert.ToString(num3, 16);
-                textBox9.Text = Hex.ToUpper();
-            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            checkBox2.Checked = !checkBox1.Checked;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox1.Checked = !checkBox2.Checked;
+        }
+
+        private void timeCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox7.Text.Length > 0)
+                textBox7.Clear();
+            if (textBox8.Text.Length > 0)
+                textBox8.Clear();
+            if (textBox9.Text.Length > 0)
+                textBox9.Clear();
         }
     }
 }
